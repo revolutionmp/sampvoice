@@ -1,3 +1,72 @@
+## sampvoice (Revolution Multiplayer Fork)
+
+**PEMBERITAHUAN PENTING: INI ADALAH REPOSITORI DENGAN DUA VERSI**
+
+Repositori ini adalah *fork* dari `cybermor/sampvoice` yang dikelola oleh tim **Revolution Multiplayer**. Tujuan utama kami adalah menyediakan dukungan **`sampctl`**, perbaikan, serta mendistribusikan versi plugin yang esensial bagi komunitas.
+
+Repositori ini menawarkan dua jalur versi:
+* **Rilis v3.1 (Modifikasi):** Versi khusus yang direkomendasikan untuk kompatibilitas maksimal, terutama dengan klien Android. **Plugin ini berasal dari sumber tertutup (*closed-source*)**.
+* **Source Code v4.1 (Asli):** Kode sumber asli dari `cybermor/sampvoice` tetap tersedia di repositori ini untuk arsip dan pengembangan di masa depan.
+
+-----
+
+### Tujuan & Fitur Utama Fork Ini
+
+Kami mem-fork repositori ini untuk menyediakan beberapa peningkatan penting:
+
+1.  **Dukungan `sampctl` Penuh**
+    Menambahkan file `pawn.json` sehingga plugin dan *include* dapat diinstal dan dikelola dengan mudah di proyek Anda.
+
+2.  **Rilis Plugin v3.1 (Sangat Direkomendasikan)**
+    Kami menyediakan biner plugin **v3.1** yang memiliki fitur-fitur penting:
+
+      * ✅ **Kompatibilitas Klien Android:** Versi ini adalah salah satu yang masih berfungsi dengan baik untuk pemain yang menggunakan klien SA-MP Android.
+      * ✅ **Fitur Custom Port:** Plugin ini secara cerdas dapat mendeteksi port server Anda. Cukup tambahkan `sv_port <port_anda>` di `server.cfg` untuk menjalankan server di port selain `7777`.
+
+3.  **Perbaikan `sampvoice.inc`**
+    File `sampvoice.inc` telah diperbarui untuk:
+
+      * ✅ **Kompabilitas `pawn-lang/samp-stdlib`:** Menggunakan sintaks modern dan menghilangkan ketergantungan pada *include* lama.
+      * ✅ **Perbaikan Warning:** Memperbaiki peringatan umum `(warning) literal array/string passed to a non-const parameter` dengan menambahkan `const` di mana diperlukan, membuat kode lebih bersih saat di-compile.
+
+### ⚠️ PERINGATAN (MOHON DIBACA) ⚠️
+
+* **Source Code v3.1 Tidak Tersedia:** File plugin (`sampvoice.dll` & `sampvoice.so`) yang ada pada rilis **v3.1** berasal dari **sumber tertutup (*closed-source*)** yang tidak diketahui (kemungkinan dari komunitas Rusia). Kami **tidak memiliki akses** ke kode sumbernya.
+* **Tanpa Jaminan & Dukungan untuk v3.1:** Karena kami tidak memiliki source code untuk versi ini, kami **tidak bisa memberikan perbaikan bug, update keamanan, atau penambahan fitur** pada plugin itu sendiri.
+* **Gunakan dengan Risiko Sendiri:** Versi v3.1 disediakan "sebagaimana adanya" (*as-is*) untuk membantu komunitas. Gunakan dengan memahami sepenuhnya risiko yang ada.
+
+### Instalasi (menggunakan `sampctl`)
+
+Kami sangat merekomendasikan untuk menggunakan rilis **v3.1**. Tambahkan dependensi berikut ke dalam file `pawn.json` gamemode Anda:
+
+```json
+"dependencies": [
+    "revolutionmp/sampvoice:v3.1"
+]
+```
+
+*(Ganti `v3.1` dengan tag rilis terbaru yang tersedia di repositori ini).*
+
+### Konfigurasi (Untuk Fitur Custom Port di v3.1)
+
+Untuk menggunakan port server selain `7777`, tambahkan baris berikut ke dalam file `server.cfg` Anda:
+
+```
+sv_port 8000
+```
+
+*(Ganti `8000` dengan port yang Anda gunakan).*
+
+Plugin akan secara otomatis mendeteksi konfigurasi ini saat server dijalankan.
+
+### Credits
+
+* **cybermor & tim:** Untuk membuat plugin sampvoice yang asli.
+* **Developer Anonim (Rusia):** Untuk memodifikasi plugin v3.1 dengan fitur custom port.
+* **Revolution Team:** Untuk melakukan *fork*, memperbaiki *include*, dan menyediakan paket ini agar kompatibel dengan `sampctl` untuk komunitas.
+
+-----
+
 # **SAMPVOICE**
 ## Description
 ---------------------------------
