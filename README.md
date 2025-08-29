@@ -41,11 +41,11 @@ Kami sangat merekomendasikan untuk menggunakan rilis **v3.1**. Tambahkan depende
 
 ```json
 "dependencies": [
-    "revolutionmp/sampvoice:v3.1"
+    "revolutionmp/sampvoice:v3.1-mods"
 ]
 ```
 
-*(Ganti `v3.1` dengan tag rilis terbaru yang tersedia di repositori ini).*
+*(Ganti `v3.1-mods` dengan tag rilis terbaru yang tersedia di repositori ini).*
 
 ### Konfigurasi (Untuk Fitur Custom Port di v3.1)
 

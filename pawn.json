@@ -1,0 +1,23 @@
+{
+    "user": "revolutionmp",
+    "repo": "sampvoice",
+    "resources": [
+        {
+            "name": "sv_server_037.zip",
+            "platform": "linux",
+            "archive": true,
+            "includes": ["sampvoice.inc"],
+            "plugins": ["sampvoice.so"]
+        },
+        {
+            "name": "sv_server_037.zip",
+            "platform": "windows",
+            "archive": true,
+            "includes": ["sampvoice.inc"],
+            "plugins": ["sampvoice.dll"]
+        }
+    ],
+    "runtime": {
+        "plugins": ["revolutionmp/sampvoice"]
+    }
+}
